@@ -1,9 +1,16 @@
 {% if disabled > 0 %}
-<div class="span3">
-    <legend>{{ title }}</legend>
-        <a href="{% url 'machine_list_id' 'SIPStatus' 'disabled' %}" class="btn btn-danger">
-            <span class="bigger"> {{ disabled_count }} </span><br />
-            Disabled
-        </a>
+<div class="col-md-4">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+            {{ title }}
+        </div>
+        <!-- /.panel-heading -->
+    	<div class="panel-body">
+        	<a href="{% url 'machine_list_id' 'SIPStatus' 'disabled' %}" class="btn btn-danger">
+            	<span class="bigger"> {{ disabled_count }} </span><br />
+            	Disabled
+        	</a>
+        </div>
+    </div>
 </div>
 {% endif %}
