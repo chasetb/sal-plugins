@@ -1,0 +1,9 @@
+[Core]
+Name = SIPStatus
+Module = sipstatus
+
+[Documentation]
+Author = Chase Thompson-Baugh
+Version = 0.1
+Website = http://amoreopensource.wordpress.com
+Description = Displays Macs with SIP turned off.

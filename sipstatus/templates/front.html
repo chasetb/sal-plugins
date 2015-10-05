@@ -1,0 +1,9 @@
+{% if disabled > 0 %}
+<div class="span3">
+    <legend>{{ title }}</legend>
+        <a href="{% url 'machine_list_front' 'SIPStatus' 'disabled' %}" class="btn btn-danger">
+            <span class="bigger"> {{ disabled_count }} </span><br />
+            Disabled
+        </a>
+</div>
+{% endif %}
