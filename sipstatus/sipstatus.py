@@ -17,7 +17,7 @@ class SIPStatus(IPlugin):
             t = loader.get_template('chasetb/sipstatus/templates/id.html')
 
 
-        disabled = machines.filter(facts__fact_name='mac_sip_enabled', facts__fact_data='false').count()
+        disabled = machines.filter(facts__fact_name='mac_sip_status', facts__fact_data='disabled').count()
 
         if disabled:
             size = 4
@@ -34,7 +34,7 @@ class SIPStatus(IPlugin):
 
     def filter_machines(self, machines, data):
         if data == 'disabled':
-            machines = machines.filter(facts__fact_name='mac_sip_enabled', facts__fact_data='false').count()
+            machines = machines.filter(facts__fact_name='mac_sip_enabled', facts__fact_data='disabled').count()
             title = 'Macs with System Integrity Protection disabled'
         else:
             machines = None
